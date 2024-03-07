@@ -1,0 +1,339 @@
+Level Number
++ - , . < > [ ] / \ & *
+Max Number of Commands
+Input
+Expected Output,Ignore Zeros
+Instructions
+...
+[Tutorial]
+...
+Disco Metropolis by Vyra | https://soundcloud.com/vyramusic
+Music promoted by https://www.free-stock-music.com
+Creative Commons Attribution 3.0 Unported License
+https://creativecommons.org/licenses/by/3.0/deed.en_US
+@#$
+0
++i -i ,i .i <i >i [i ]i /i \i &i *i
+i
+r
+1,true
+!Output 1.
+--- Playground ---
+Have fun experimenting around with the commands in the playground with no limits! 
+All input values are random and range from 0 to 10.
+@#$
+1 (+++++.)
++i -0 ,0 .i <0 >0 [0 ]0 /0 \0 &0 *0
+i
+null
+5,true
+!Output 5.
+--- Tutorial ---
+This area is designated to tutorial text.
+Here you'll find explanations of the various commands available and tips about the game.
+Whenever there is more information,     { Next } will appear in the top right corner.
+Click it to continue reading.
+--- Game --- 
+In this game, your goal is to create programs that fulfill certain tasks (like "Output 5").
+To create those programs you'll need to understand a few things first.
+--- Memory --- 
+The large three rings on the top left corner of the screen make up what is called the Dial.
+The Dial contains nine boxes called cells.
+The cell with the white circle on it is the currently selected cell.
+That white circle is called the "cell selector".
+--- Commands --- 
+To create a program, you'll need to select commands from the panel on the top right of the screen.
+The commands will be processed one by one in order when the program is running.
+--- { + } ---
+The Increment command.
+It will add 1 to the currently selected cell.
+--- { . } ---
+The output command.
+The red row of the Dial is the output row.
+When the output command is processed, it will output all the numbers in the cells currently in the output row.
+Excess zeros will always be ignored.
+--- Compile --- 
+When you have finished creating your program, simply click { Compile } and the program will be processed. 
+--- Example ---
++++.\n
+This program will add three to the first cell and then output it.
+Final output: 3
+--- Reset ---
+If you make a mistake while creating the program, you can always click { Reset } to clear your code.
+--- Levels ---
+When you've finished the level, click { Lv. } and select your next level.
+Your current level will be marked in red, and any completed levels will be marked yellow. 
+@#$
+2 (++>+++++++.)
++i -0 ,0 .1 <i >i [0 ]0 /0 \0 &0 *0
+i
+null
+2.7,true
+!Output 2 and 7.
+--- { < } ---
+The Left command.
+This will move the cell selector one cell to the left.
+In the case there is no more cells to the left, the cell selector will move to the furthest right cell.
+--- { > } ---
+The Right command.
+This will move the cell selector one cell to the right.
+In the case there is no more cells to the right, the cell selector will move to the furthest left cell.
+--- Example --- 
++>+>+.\n
+This program adds one to each cell in the output row and then outputs it.\n
+Final output: 1 1 1
+--- Restrictions ---
+Sometimes levels will contain restrictions on the amount of a certian command you can use.
+Once the alloted amount of uses is reached, you'll no longer be able to use that command, so use your commands wisely.
+--- Command Bar ---
+The long bar on the bottom of the screen is called the Command Bar.
+Select a command in the command bar by clicking on it.
+From here, you can replace it by clicking another command from the panel or { Delete } it outright.
+@#$
+3 (,---.)
++0 -i ,i .i <0 >0 [0 ]0 /0 \0 &0 *0
+i
+13=5=120
+10=2=117,true
+!Output 3 less than the input.
+--- { , } ---
+The Input command.
+This command will accept a randomly generated input value onto the currently selected cell.
+--- Example ---
+,++.\n
+This program will receive an input, add 2 to it, and then output the result.
+Final output: Input + 2
+--- Trials ---
+Levels utilizing input will have multiple trials to ensure you are unable to brute-force solutions to challenges.
+@#$
+4 (,[->+++<].)
++i -i ,i .i <i >i [i ]i /0 \0 &0 *0
+i
+4=5=3
+12=15=9,true
+!Output triple the input.
+--- { [ } --- 
+The Loop Start command.
+This marks the start of a loop.
+Please read the section about loops for more information.
+--- { ] } --- 
+The Loop End command.
+This marks the end of a loop.
+Please read the section about loops for more information.
+--- Loops Part 1 --- 
+All the commands between { [ } and { ] } will be repeated over and over until the selected cell's number is 0.
+This can be achieved by having a number larger than 0 in the selected cell and then decreasing it with { - } until it reaches 0.
+--- Loops Part 2 --- 
+Furthermore, if the selected cell is 0 to begin with, the commands inside the loop will get skipped.
+If the cell never reaches 0, the loop will never end.
+--- Loop Examples  --- 
+[-]
+   This will decrement the current cell by one until it reaches 0.\n
+[->+<]
+   This will move the cell's number one cell to the right.
+--- Example 1 --- 
+,[-].\n
+This program will accept an input to the current cell and then subtract 1 over and over until the cell is 0.
+Final output: 0
+--- Example 2 --- 
+,[->++<].
+   This program accepts input to the first cell,
+and then subtracts 1 from the first cell and adds 2 to the second cell
+until the first cell is 0.
+Notice how this essentially multiplies the input by 2.
+Possible Input: 3, Possible Output: 6
+--- Speed Up ---
+With the introduction of loops, programs will start to take a while to execute.
+If you wish to speed up the exection, simply press the two arrows to the left of { Delete } to speed up the execution by two times.
+Keep clicking it to speed it up even further.
+@#$
+5 (,>,<[->-[>]>].)
++i -i ,i .i <i >i [2 ]2 /0 \0 &0 *0
+i
+3.2=7.5=2.6
+1=2=4,true
+!Output the difference of the two inputs.
+--- Multiple Inputs ---
+To recieve multiple inputs in one level, simply use { , } multiple times.
+Remember to change which cell you accept input onto.
+--- Nesting Loops ---
+Loops can be placed inside of other loops at any time.
+--- Loop Examples ---
+[>]
+   This will move the cell selector the next cell with a zero.
+--- Abort ---
+If you ever want to end the execution of a program prematurely, simply click the circle with a line through it next to { Speed Up }.
+--- Intro to Hints Part 1---
+From here on out, the puzzles will begin to be significantly more challenging.
+On difficult levels, don't be afraid to consult the hints.
+--- Intro to Hints Part 2 ---
+Of course, they are only hints; don't expect to just get the answer from them.
+If you're ever really stuck, consider reading the level solution from the main menu.
+--- Hints ---
+Hints begin beyond this page.
+--- Hint 1 ---
+Begin by accepting inputs twice.
+It should look like this:
+,>,<
+--- Hint 2 ---
+It always helps to imagine a scenario for your program.
+If the inputs are 8 and 3, the program should finish with the cells containing 5 and 0.
+--- Hint 3 ---
+The program should then proceed to substract 1 from each input value.
+[->-]
+--- Hint 4 ---
+You'll need some way to determine when either of the values becomes 0.
+Loops can achieve just that.
+--- Hint 5 ---
+,>,<[->-[?]?].
+Any amount of commands can be behind the ?.
+@#$
+6 (+++[->,[->+<]<].)
++i -i ,1 .i <i >i [i ]i /0 \0 &0 *0
+i
+2.8.5=9.0.7=4.8.8
+15=16=20,true
+!Output the sum of the three inputs.
+--- Hints ---
+Hints begin beyond this page.
+--- Hint 1 ---
+You need to accept an input three times but only have one input command.
+The input command needs to be inside a loop.
+--- Hint 2 ---
+Set up such a loop by setting the first cell to 3.
++++[?]
+--- Hint 3 ---
+Each cell will have a specific use in this challenge.
+The first should be a counter for the amount of times you need to accept an input.
+The second cell should be where you accept input.
+--- Hint 4 ---
+The third cell should be where the sum is.
+All inputs should be added into the third cell.
+-- Hint 5 ---
++++[->,[?]?].
+Any amount of commands can be behind the ?.
+@#$
+7 (,[-\+>+>+>/]\.)
++i -i ,i .1 <i >i [i ]i /i \i &0 *0
+15
+3=5=9
+3.3.3=5.5.5=9.9.9,true
+!Output three of the input at once.
+--- The Rings ---
+The Dial contains three rings.
+The ring that the cell selector alligns with is called the current ring.
+--- { / } ---
+The Up command.
+This will shift the current ring up one, bringing the cell from the bottom of the current ring to the output row.
+--- { \ } ---
+The Down command.
+This will shift the current ring down one, bringing the next cell of the current ring to the output row.
+@#$
+8 (,&>&<[->+<].)
++1 -i ,i .i <i >i [i ]i /0 \0 &i *0
+i
+2=0=5
+4=0=10,true
+!Output double the input.
+--- { & } ---
+The reference command.
+This is a 'multi-use' command.
+Use it the first time to place the beginning of the reference and then a second time to place the end.
+--- Reference ---
+Essentially, this command is a copy-paste.
+It will take the value of the cell with the beginning of the reference and then copy that value to the cell where the end is placed.
+@#$
+9 (*>*<,[-])
++0 -1 ,i .i <i >i [i ]i /0 \0 &0 *i
+i
+5=20=83
+-5=-20=-83,true
+!Output the negative of the input.
+--- Clarification ---
+An input of 2 would have a desired output of -2.
+--- { * } ---
+The Pointer command.
+This is another 'multi-use' command.
+Use it the first time to place the beginning of the pointer and then a second time to place the end.
+The beginning and end cannot be the same cell.
+--- Pointers ---
+By incrementing or decrementing a cell with a pointer, the other cell with a pointer will also be incremented or decremented.
+@#$
+10 (,\>,[-<\&\&[-<+>]>].)
++i -i ,i .i <i >i [i ]i /i \i &2 *0
+20
+4.5=2.3=1.0
+20=6=0,true
+!Output the product of the two inputs.
+--- Hints ---
+Hints begin beyond this page.
+--- Hint 1 ---
+Multiplying is basically just adding a number x amount of times...
+@#$
+11 (+\-\[\->+[<]>-\]/.)
++i -i ,i .i <i >i [i ]i /i \i &0 *0
+18
+null
+127,true
+!Output 127.
+--- Cells ---
+In each cell there is a digit.
+This digit specifically is what is called a signed byte.
+To explain a signed byte, however, a byte must be explained first.
+--- Bytes ---
+A byte is a data storage type.
+Made up of eight bits, the digit can store all values ranging from 0 to 255.
+--- Overflow ---
+Once the byte reaches its max, adding one more to the number will cause it to overflow, resetting it to its minimum value.
+The process would go 253, 254, 255, 0, 1, 2... and so on.
+--- Signatures ---
+Essentailly, a signature on a data type allows that digit to be negative.
+However, the byte still only has a range of 255, so, to accomidate for negative integers, the values are shifted.
+--- Signatures Part 2 ---
+A signed byte therefore has a range of -128 to 127.
+However, while the values have changed, the issue of overflowing still exists.
+The process would now be 125, 126, 127, -128, -127, -126... and so on.
+--- Hints ---
+Hints begin beyond this page.
+--- Hint 1 ---
+Use the process of overflowing the cell to act as a counter for a loop.
+--- Hint 2 ---
+Half of 255 (a byte's value range) is 127.
+@#$
+12 (,&*>&+*<[-->[>]<<].)
++1 -2 ,i .i <i >i [i ]i /0 \0 &i *i
+19
+4=5=12
+1=-1=1,true
+!Output if the input is even or odd.
+--- Clarification ---
+Output 1 for even, -1 for odd.
+--- Hints ---
+Hints begin beyond this page.
+--- Hint 1 ---
+Have a counter that is constantly 1 more than the input.
+That way, one of the cells is guaranteed to be even.
+This is the only hint. It's totally not because I'm lazy.
+@#$
+13 (,>+<[-\>&/&\[-\+/]\.<\])
++i -i ,i .i <i >i [i ]i /i \i &i *0
+23
+5=2=10
+1.2.3.5.8=1.2=1.2.3.5.8.13.21.34.55.89,true
+!Output the first N Fibonacci numbers.
+--- Clarification ---
+N is equal to the input in this case.
+Start the Fibonacci sequence on the second 1.
+The output of N = 5 should look like this: 1, 2, 3, 5, 8.
+--- Hints ---
+Hints begin beyond this page.
+--- Hint 1 ---
+The Fibonacci sequence is just the sum of the previous two values.
+--- Hint 2 ---
+Use rings to your advantge to output numbers correctly.
+--- Hint 3 ---
+You'll need to be able to reference the N value, but also not include it in the output.
+--- Hint 4 ---
+Start by adding 1 and 0.
+--- Hint 5 ---
+You'll want to save the current sum of the values before adding it with the previous sum.
