@@ -1,6 +1,6 @@
 # BrainAnd
 
-An intense puzzle game based on my own esoteric programming language. Developed with Unity, this project served as an inspiration for a meeting I later gave at my school's Computer Science Club. 
+Founded a unique esoteric programming language for an intense puzzle game built with Unity.
 > Created my Junior year of High School as a personal project. Hosted on [itch.io](https://cubetures.itch.io/brainand).
 
 ![image](https://github.com/owenshadburne/BrainAnd/assets/124115160/01ab9e6c-083a-4436-9404-2ae36d016731)
